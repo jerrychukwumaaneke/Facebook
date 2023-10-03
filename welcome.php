@@ -1,0 +1,128 @@
+<?php 
+session_start();
+error_reporting(0);
+include("include/config.php");
+ ?>
+
+ <?php
+
+$uid=$_SESSION['uid'];
+$query_run=mysqli_query($con, "SELECT * FROM reg WHERE id='$uid'");
+$row=mysqli_fetch_array($query_run);
+$img=$row['image'];
+
+?>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WWW.facebook.com</title>
+	<link rel="stylesheet" type="text/css" href="font/css/all.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="= color: white;">
+<div  id="container">
+	<header>
+		<h1 id="a" >facebook</h1>
+		<a href="mode.php" style="text-decoration: none;" id="may">Light Mode</a>
+		<a href="#"><i class="fa fa-search" id="b"></i></a>
+		<a href="#"><i class="fa fa-list" id="c"></i></a>
+</header>
+<main>
+	<a href="welcome.php"><i class="fa fa-home" id="d"></i></a>
+	<a href="#"><i class="fa fa-users" id="e"></i></a>
+	<a href="#"><i class="fab fa-facebook-messenger" id="f"></i></a>
+	<a href="#"><i class="fa fa-bell" id="g"></i></a>
+	<a href="#"><i class="fa fa-tv video screen" id="h"></i></a>
+	<a href="#"><i class="fa fa-box" id="i"></i></a>
+</main>
+<hr>
+<aside>
+	<div><!-- <img src="img/IMG_20190818_155825_895.jpg" width="100%" id="j" height="80%" style="border-radius:100%"> -->
+	<img src="img/<?= $img ?>" alt="profilpic" width="100%" height="80%" style="border-radius:100%"></div>
+	<div style="width: 60%;">
+		<a href="#"><i class="fa fa-search" id="k">What is on your mind</i></a>
+		</div>
+		<div>
+	<a href="#"><i class="fa fa-images" id="l"><br>Photos</i>
+	</a>
+</div>
+</aside>
+<hr>
+<p id="rema">1</p>
+<p id="obo">2</p>
+<p id="simi">3</p>
+<p id="bil">4</p>
+<p id="joro">+</p>
+<p id="phyno">Add to<br>story</p>
+<p id="dremo">Curry</p>
+<p id="dmw">Mayor of<br>lagos</p>
+<p id="ybnl">Arsenal</p>
+<p id="yrn">Migos</p>
+<section>
+<img src="img/IMG_20190814_013925_195.jpg" width="95%" height="100%" style="border-radius:25px" id="m">
+<img src="img/IMG_20190811_125703_428.jpg" width="95%" height="100%" style="border-radius:25px" id="n">
+<img src="img/IMG_20190814_022136_018.jpg"width="95%" height="100%" style="border-radius:25px" id="o">
+<img src="img/IMG_20191127_161249_544.jpg" width="95%" height="100%" style="border-radius:25px" id="p">
+<img src="img/4a7af24c56f14c3799dfdfb2d4f35eb1.jpg" width="95%" height="100%" style="border-radius:25px" id="q">
+</section>
+<br><br><hr>
+
+
+<div id="go">
+<div id="s"><img src="img/91e196cb0a4a468f9daa4ad2c9b40ff1.jpg" width="100%" id="j" height="80%" style="border-radius:100%"></div>
+<div ><h3 id="t">NBA .....<br><br>1 minute ago <i class="fa fa-globe"></i> </h3></div>
+<div id="r"><a href="#" style="padding-left: 3%;">...</a>
+<a href="#" style="padding-left: 4%;">X</a>
+</div>
+</div>
+<div id="u"><img src="img/91e196cb0a4a468f9daa4ad2c9b40ff1.jpg" ></div>
+
+<div id="ab">
+<div style=" border-radius: 30%; width: 10%; "><i class="fa fa-thumbs-up" style="padding-left: 0.5em;"></i></div>
+<div style=" border-radius: 30%; width: 10%;"><i class="fa fa-comment" style="padding-left: 0.5em;"></i></div>
+<div style=" border-radius: 30%; width: 10%;"><i class="fas fa-share" style="padding-left: 0.5em;"></i></div>
+</div>
+
+<hr>
+
+
+
+<div id="go">
+<div id="s"><img src="img/IMG_20190811_125703_428.jpg" width="100%" id="j" height="80%" style="border-radius:100%"></div>
+<div ><h3 id="t">Steph Curry .....<br><br>30 minute ago <i class="fa fa-globe"></i> </h3></div>
+<div id="r"><a href="#" style="padding-left: 3%;">...</a>
+<a href="#" style="padding-left: 4%;">X</a>
+</div>
+</div>
+<div id="u"><img src="img/2349061201521_status_4fecae4063524c6f8181ff694c502574.jpg" ></div>
+<div id="ab">
+<div style="border-radius: 30%; width: 10%; "><i class="fa fa-thumbs-up" style="padding-left: 0.5em;"></i></div>
+<div style=" border-radius: 30%; width: 10%;"><i class="fa fa-comment" style="padding-left: 0.5em;"></i></div>
+<div style="border-radius: 30%; width: 10%;"><i class="fas fa-share" style="padding-left: 0.5em;"></i></div>
+</div>
+<hr><br>
+
+
+
+<div id="go">
+<div id="s"><img src="img/hospital.jfif" width="100%" id="j" height="80%" style="border-radius:100%"></div>
+<div ><h3 id="t">Jerry Hospital Clinic .....<br><br>30 minute ago <i class="fa fa-globe"></i> </h3></div>
+<div id="r"><a href="#" style="padding-left: 3%;">...</a>
+<a href="#" style="padding-left: 4%;">X</a>
+</div>
+</div>
+<div id="u"><img src="img/hospital.jfif" ></div>
+<div id="ab">
+<div style=" border-radius: 30%; width: 10%; "><i class="fa fa-thumbs-up" style="padding-left: 0.5em;"></i></div>
+<div style="border-radius: 30%; width: 10%;"><i class="fa fa-comment" style="padding-left: 0.5em;"></i></div>
+<div style=" border-radius: 30%; width: 10%;"><i class="fas fa-share" style="padding-left: 0.5em;"></i></div>
+</div>
+<hr><br>
+</div>
+</body>
+</html>
